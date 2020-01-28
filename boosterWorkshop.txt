@@ -1,0 +1,49 @@
+Forklare aktører
+	Resource Owner
+	Client Apps
+	Authorization Server
+	Resource Server
+
+Forklare flows
+	Authorization Code flow
+
+
+Oppgave 0 sette opp brukernavn og passord
+
+Oppgave 1 sette opp oAuth server
+
+Oppgave 2 Postman/curl
+	http://localhost:8081/auth/oauth/authorize?response_type=code&client_id=booster-private-client&state=123&redirect_uri=http://localhost:8083/login/oauth2/code/
+
+	  oauth token endepunktet
+
+Oppgave 3 sette opp klient
+
+Oppgave 4 scopes
+	Uten fungerende scopes
+	Fikse scopes i klient og server
+	autocommit
+
+Oppgave 5 Public client
+
+Oppgave 6
+
+
+
+(Oppgave 5 Redirect url)
+
+Oppgave 6 Implicit flow
+
+Oppgave 7 PKCE
+
+
+
+Scopes
+
+
+
+
+
+PKCE
+https://developer.okta.com/blog/2020/01/23/pkce-oauth2-spring-boot
+https://sultanov.dev/blog/authorization-code-flow-with-pkce-in-spring-security-oauth/

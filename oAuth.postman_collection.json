@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "4b2ed628-08a9-4d33-ac40-f3f5896b1797",
+		"name": "oAuth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8081/auth/oauth/token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.my.company.json;v=1.0"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "client_id",
+							"value": "booster-private-client",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "fDw7Mpkk5czHNuSRtmhGmAGL42CaxQB9",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "text"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:8083/login/oauth2/code/",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "a_random_string",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "<your_code>",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8081/auth/oauth/token",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"auth",
+						"oauth",
+						"token"
+					]
+				},
+				"description": "Request to exchange access code for access token"
+			},
+			"response": []
+		},
+		{
+			"name": "PKCE",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.my.company.json;v=1.0"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "client_id",
+							"value": "booster-public-client",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "text"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:8083/login/oauth2/code/",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "a_random_string",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "<your_code>",
+							"type": "text"
+						},
+						{
+							"key": "code_verifier",
+							"value": "979c7636-8f46-4064-91d9-b7ac83632033",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8081/auth/oauth/token",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"auth",
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
