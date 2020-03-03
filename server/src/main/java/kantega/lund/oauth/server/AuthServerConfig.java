@@ -73,21 +73,10 @@ public class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         //TODO: Task 2
-        clients.inMemory()
-                .withClient("booster-private-client")
-                .secret(passwordEncoder.encode("fDw7Mpkk5czHNuSRtmhGmAGL42CaxQB9"))
-                .authorizedGrantTypes(AUTHORIZATION_CODE_GRANT_TYPE)
-                .scopes("user_info")
-                .autoApprove(true)
-                .redirectUris("http://localhost:8082/login/oauth2/code/")
+        clients.inMemory();
                 //TODO: Task 6
-                .and()
-                .withClient("booster-public-client")
-                .secret("{noop}")
-                .redirectUris("http://localhost:8082/login/oauth2/code/")
-                .authorizedGrantTypes(AUTHORIZATION_CODE_GRANT_TYPE)
-                .scopes("user_info")
-                .autoApprove(true);
+//                .and()
+
     }
 
 }

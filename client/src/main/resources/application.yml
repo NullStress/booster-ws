@@ -13,22 +13,16 @@ spring:
         registration:
           private-client:
             client-id: booster-private-client
-            client-secret: fDw7Mpkk5czHNuSRtmhGmAGL42CaxQB9
             client-name: Private Client
-            scope: user_info
-            provider: custom-provider
-            redirect-uri: http://localhost:8082/login/oauth2/code/
             client-authentication-method: basic
-            authorization-grant-type: authorization_code
+            client-secret:
+            provider:
+            redirect-uri:
+            authorization-grant-type:
         #TODO: Task 9
-          public-client:
-            client-id: booster-public-client
-            client-name: Public Client with PKCE
-            scope: user_info
-            provider: custom-provider
-            redirect-uri: http://localhost:8082/login/oauth2/code/
-            client-authentication-method: none
-            authorization-grant-type: authorization_code
+#          public-client:
+#            client-id: booster-public-client
+#            client-name: Public Client with PKCE
         provider:
           custom-provider:
             token-uri: http://localhost:8081/auth/oauth/token

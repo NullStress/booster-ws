@@ -9,14 +9,8 @@ public enum CodeChallengeMethod {
     S256 {
         @Override
         public String transform(String codeVerifier) {
-            //TODO: Task 7
-            try {
-                MessageDigest digest = MessageDigest.getInstance("SHA-256");
-                byte[] hash = digest.digest(codeVerifier.getBytes(StandardCharsets.US_ASCII));
-                return Base64.getUrlEncoder().withoutPadding().encodeToString(hash);
-            } catch (NoSuchAlgorithmException e) {
-                throw new IllegalStateException(e);
-            }
+            //TODO: Task 7, replace with SHA-256
+            return codeVerifier;
         }
     },
     PLAIN {
